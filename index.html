@@ -1,0 +1,2227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final_project</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Toggle button -->
+    <header class="opacity-1">
+      <div class="container-fluid p-0 font-Anton">
+        <nav
+          id="navbar"
+          class="navbar nav-color navbar-expand-lg py-3 fixed-top bg-black"
+        >
+          <div class="container p-0">
+            <div class="navbar-brand">
+              <a href="#" class="text-light fs-4"
+                ><img src="asset/logo.png" alt="" width="150px"
+              /></a>
+            </div>
+            <div class="offcanvas offcanvas-end bg-red" id="nav_tabpage">
+              <div class="offcanvas-header border-bottom border-2">
+                <img src="asset/logo_footer.png" alt="" width="150px" />
+                <button
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="close"
+                ></button>
+              </div>
+              <style></style>
+              <ul
+                role="tablist"
+                class="offcanvas-body nav d-block d-lg-flex nav-tabs justify-content-lg-center justify-content-start align-items-start align-items-lg-center m-0 p-0 border-0"
+              >
+                <li class="nav-item mx-0 mx-lg-3 my-3 my-lg-0 py-lg-0">
+                  <a
+                    href="#Hero_Home"
+                    class="btn shadow-none border-0 fs-5 nav-link active"
+                    data-bs-toggle="tab"
+                    target="_self"
+                  >
+                    Home</a
+                  >
+                </li>
+                <li class="nav-item mx-0 mx-lg-3 my-3 my-lg-0 py-lg-0">
+                  <a
+                    href="#About"
+                    class="btn shadow-none border-0 fs-5 nav-link"
+                    data-bs-toggle="tab"
+                  >
+                    About</a
+                  >
+                </li>
+                <li class="nav-item mx-0 mx-lg-3 my-3 my-lg-0 py-lg-0">
+                  <a
+                    href="#Order"
+                    class="btn shadow-none border-0 fs-5 nav-link"
+                    data-bs-toggle="tab"
+                  >
+                    Order</a
+                  >
+                </li>
+                <li class="nav-item mx-0 mx-lg-3 my-3 my-lg-0 py-lg-0">
+                  <a
+                    href="#Contact"
+                    class="btn shadow-none border-0 fs-5 nav-link"
+                    data-bs-toggle="tab"
+                  >
+                    Contact</a
+                  >
+                </li>
+                <div class="p-0">
+                  <button
+                    class="btn form-control rounded-0 bg-black text-light d-lg-none"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvassearch"
+                  >
+                    Search
+                  </button>
+
+                  <p class="mt-5 text-center text-light fs-5 d-block d-lg-none">
+                    Contact Direct To me
+                    <span class="text-nowrap">
+                      <i class="bi bi-telephone-plus mx-1"></i>
+                      (+855)715763396</span
+                    >
+                  </p>
+                </div>
+              </ul>
+              <div class="d-lg-none d-block mb-4">
+                <h3 class="text-center fw-bold text-light">
+                  Thank For choosing our sevice
+                </h3>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center">
+              <!-- Phone  -->
+              <span
+                class="nav-item d-none d-md-block d-lg-flex align-items-center hover-color-red"
+                ><i class="bi bi-telephone-plus fs-5 fw-bold"></i>
+                <span class="mx-3">(+855)715763396</span>
+              </span>
+
+              <!-- card btn  -->
+              <!-- <button
+                class="btn shadow-none border-0 fs-5 nav-link text-light text-light"
+              >
+                <i class="bi bi-cart-check-fill"></i>
+              </button> -->
+              <button
+                class="navbar-toggler btn shadow-none border-0 fs-5 nav-link text-light text-light"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#nav_tabpage"
+              >
+                <i class="bi bi-list text-light"></i>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container-fluid m-0 p-0">
+        <!-- offcanvas search  -->
+        <div
+          class="offcanvas offcanvas-top offcanvas-end bg-red bg-opacity-50 rounded-3 mt-3"
+          id="offcanvassearch"
+        >
+          <div class="offcanvas-header">
+            <h3 class="text-white m-0">Please search your food</h3>
+          </div>
+          <div class="offcanvas-body">
+            <form action="search">
+              <label for="search">Input your search</label>
+              <input
+                type="text "
+                name="search"
+                id="search"
+                placeholder="Search here"
+                class="active form-control shadow-none"
+                required
+              />
+              <button
+                class="btn btn-dark mt-2"
+                type="submit"
+                data-bs-dismiss="offcanvas"
+                role="search"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="tab-content">
+          <!-- Home contents  -->
+          <div class="tab-pane fade show active" id="Hero_Home">
+            <div
+              id="Carousel_hero_slide"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <!-- First Slide: Active for 3 seconds -->
+                <div
+                  class="carousel-item active position-relative"
+                  data-bs-interval="3000"
+                >
+                  <img
+                    src="asset/caruosel_page1.jpg"
+                    class="carousel-card-style w-100 h-100 d-block"
+                    alt="Carousel1"
+                  />
+                  <div
+                    class="position-absolute top-50 start-50 translate-middle d-flex justify-content-center"
+                  >
+                    <span
+                      class="text-capitalize fw-bolder bg-dark bg-opacity-75 p-3 px-5 text-nowrap"
+                    >
+                      Very yummy and Delicious
+                    </span>
+                  </div>
+                </div>
+                <!-- Second Slide: Active for 3 seconds -->
+                <div
+                  class="carousel-item position-relative"
+                  data-bs-interval="2000"
+                >
+                  <img
+                    src="asset/carousel_image_page2.jpg"
+                    class="carousel-card-style w-100 h-100 d-block"
+                    alt="Carousel2"
+                  />
+                  <div
+                    class="position-absolute top-50 start-50 translate-middle"
+                  >
+                    <div
+                      class="text-capitalize fw-bolder text-center bg-dark bg-opacity-75 p-3 text-nowrap"
+                    >
+                      <span class="m-0">Best Quality </span><br />
+                      <span class="m-0">Good Taste</span>
+                      <button class="btn btn-danger px-3">Menu</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Navigation Buttons -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#Carousel_hero_slide"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#Carousel_hero_slide"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <!-- introduct menu -->
+            <div class="container-fluid p-0">
+              <div class="p-0 py-4 mt-5 font-Anton">
+                <h1 class="text-center">
+                  <i class="bi bi-align-end text-dark-emphasis"></i
+                  ><span class="text-red fw-bold px-2">Our Menu</span
+                  ><i class="bi bi-align-start text-dark-emphasis"></i>
+                </h1>
+              </div>
+              <div class="container p-0 py-5">
+                <div
+                  id="intro_list"
+                  class="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center list-unstyled"
+                >
+                  <li class="p-2 px-3 bg-transparent">
+                    <div
+                      class="position-relative h-100 overflow-hidden rounded-3 border border-dark-subtle border-3"
+                    >
+                      <a href="#pizza-intro">
+                        <img
+                          src="asset/intro_menu1.jpg"
+                          alt=""
+                          class="object-fit-cover"
+                          width="100%"
+                          height="100%"
+                        />
+                        <div
+                          class="position-absolute start-50 top-50 bg-dark translate-middle h-100 w-100 bg-opacity-50 text-light flex-column d-flex justify-content-center align-items-center"
+                        >
+                          <h2 class="fw-bolder position-absolute">Pizza</h2>
+                          <h4 class="border-2 border p-5 rounded-2">
+                            View Menu
+                          </h4>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="p-2 px-3 bg-transparent">
+                    <div
+                      class="position-relative h-100 overflow-hidden rounded-3 border border-dark-subtle border-3"
+                    >
+                      <a href="#burger-intro">
+                        <img
+                          src="asset/intro_menu2.jpg"
+                          alt=""
+                          class="object-fit-cover"
+                          width="100%"
+                          height="100%"
+                        />
+                        <div
+                          class="position-absolute start-50 top-50 bg-dark translate-middle h-100 w-100 bg-opacity-50 text-light flex-column d-flex justify-content-center align-items-center"
+                        >
+                          <h2 class="fw-bolder position-absolute">Pasta</h2>
+                          <h4 class="border-2 border p-5 rounded-2">
+                            View Menu
+                          </h4>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="p-2 px-3 bg-transparent">
+                    <div
+                      class="position-relative h-100 overflow-hidden rounded-3 border border-dark-subtle border-3"
+                    >
+                      <a href="#pasta-intro">
+                        <img
+                          src="asset/intro_menu3.jpg"
+                          alt=""
+                          class="object-fit-cover"
+                          width="100%"
+                          height="100%"
+                        />
+                        <div
+                          class="position-absolute start-50 top-50 bg-dark translate-middle h-100 w-100 bg-opacity-50 text-light flex-column d-flex justify-content-center align-items-center"
+                        >
+                          <h2 class="fw-bolder position-absolute">Burger</h2>
+                          <h4 class="border-2 border p-5 rounded-2">
+                            View Menu
+                          </h4>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                  <li class="p-2 px-3 bg-transparent">
+                    <div
+                      class="position-relative h-100 overflow-hidden rounded-3 border border-dark-subtle border-3"
+                    >
+                      <a href="#salad-intro">
+                        <img
+                          src="asset/intro_menu4.jpg"
+                          alt=""
+                          class="object-fit-cover"
+                          width="100%"
+                          height="100%"
+                        />
+                        <div
+                          class="position-absolute start-50 top-50 bg-dark translate-middle h-100 w-100 bg-opacity-50 text-light flex-column d-flex justify-content-center align-items-center"
+                        >
+                          <h2 class="fw-bolder position-absolute">Pizza</h2>
+                          <h4 class="border-2 border p-5 rounded-2">
+                            View Menu
+                          </h4>
+                        </div>
+                      </a>
+                    </div>
+                  </li>
+                </div>
+              </div>
+            </div>
+            <!-- intro and promote  -->
+            <div class="container p-0 py4">
+              <div
+                class="justify-content-center align-items-center row row-cols-1 row-cols-md-2 m-0 py-4"
+              >
+                <div class="ps-md-5 ps-0 m-auto p-0 text-center">
+                  <!-- title  -->
+                  <h1 class="fw-bolder text-red" style="font-size: 50px">
+                    Best Offer
+                    <p class="ps-0 ps-md-5 ms-5">25% Off</p>
+                  </h1>
+                  <span class="text-dark-emphasis ps-0 ps-ms-5 ms-0 ms-md-5"
+                    >Mondays Only 14:00 to 19:00</span
+                  >
+                  <p class="m-0 my-4 ms-5 ps-5">
+                    <button class="btn btn-outline-danger border-2 fw-semibold">
+                      Order Now
+                    </button>
+                  </p>
+                </div>
+                <div class="bg-secondary p-0">
+                  <img
+                    src="asset/intro_promote.png"
+                    alt=""
+                    width="100%"
+                    class="object-fit-cover"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- Intro text -->
+            <div
+              class="container-fluid p-0 py-4 bg-red bg-opacity-75 hover-bg-black hover-scale"
+            >
+              <h1
+                style="font-size: clamp(1.4rem, 5vw, 3rem) !important"
+                class="text-center text-light fw-bold font-Anton"
+              >
+                Fast food is the term for a kind of food
+              </h1>
+            </div>
+            <!-- Pizza intro -->
+            <div id="pizza-intro">
+              <div
+                class="justify-content-center align-items-center row row-cols-1 row-cols-md-2"
+              >
+                <div class="p-0">
+                  <img
+                    src="asset/Pizza_intro.jpg"
+                    alt=""
+                    class="object-fit-cover intro-card"
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+                <div class="px-1 px-md-4">
+                  <h1
+                    class="text-center text-uppercase fw-bold text-red text-decoration-underline"
+                  >
+                    Pizza
+                  </h1>
+                  <ul class="pt-4">
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-end"
+                    >
+                      <i class="bi bi-pie-chart-fill text-red fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Special Pizza</span
+                        ></i
+                      >
+                      <span class="fw-normal me-3">$29.99</span>
+                    </li>
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-start"
+                    >
+                      <i class="bi bi-pie-chart-fill text-red fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Greek Pizza</span
+                        ></i
+                      >
+                      <span class="fw-normal me-3">$21.99</span>
+                    </li>
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-end"
+                    >
+                      <i class="bi bi-pie-chart-fill text-red fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Margherita</span
+                        ></i
+                      >
+
+                      <span class="fw-normal me-3">$15.99</span>
+                    </li>
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-start"
+                    >
+                      <i class="bi bi-pie-chart-fill text-red fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Italian Pizza</span
+                        ></i
+                      >
+                      <span class="fw-normal me-3">$17.99</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- burger intro  -->
+            <div id="burger-intro">
+              <div
+                class="justify-content-center align-items-center row row-cols-1 row-cols-md-2"
+              >
+                <div class="px-1 px-md-4">
+                  <h1
+                    class="text-center text-uppercase fw-bold text-red text-decoration-underline"
+                  >
+                    Burgers
+                  </h1>
+                  <ul class="pt-4">
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-end"
+                    >
+                      <i class="bi bi-list fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Cheeseburger</span
+                        ></i
+                      >
+                      <span class="fw-normal me-3">$29.99</span>
+                    </li>
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-start"
+                    >
+                      <i class="bi bi-list fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Hamburger</span
+                        ></i
+                      >
+                      <span class="fw-normal me-3">$25.99</span>
+                    </li>
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-end"
+                    >
+                      <i class="bi bi-list fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Chicken Burger</span
+                        ></i
+                      >
+
+                      <span class="fw-normal me-3">$18.99</span>
+                    </li>
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-start"
+                    >
+                      <i class="bi bi-list fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Mashroom Burger</span
+                        ></i
+                      >
+                      <span class="fw-normal me-3">$17.99</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-0">
+                  <img
+                    src="asset/burger_intro.png"
+                    alt=""
+                    class="object-fit-cover intro-card"
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- pasta intro  -->
+            <div id="pasta-intro">
+              <div
+                class="justify-content-center align-items-center row row-cols-1 row-cols-md-2"
+              >
+                <div class="p-0">
+                  <img
+                    src="asset/pasta_intro.jpg"
+                    alt=""
+                    class="object-fit-cover intro-card"
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+                <div class="px-1 px-md-4">
+                  <h1
+                    class="text-center text-uppercase fw-bold text-red text-decoration-underline"
+                  >
+                    Pasta
+                  </h1>
+                  <ul class="pt-4">
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-end"
+                    >
+                      <i class="bi bi-egg-fried text-warning fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis">Ravioli</span></i
+                      >
+                      <span class="fw-normal me-3">$29.99</span>
+                    </li>
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-start"
+                    >
+                      <i class="bi bi-egg-fried text-warning fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Spaghetti</span
+                        ></i
+                      >
+                      <span class="fw-normal me-3">$21.99</span>
+                    </li>
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-end"
+                    >
+                      <i class="bi bi-egg-fried text-warning fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis">Lasagne</span></i
+                      >
+
+                      <span class="fw-normal me-3">$15.99</span>
+                    </li>
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-start"
+                    >
+                      <i class="bi bi-egg-fried text-warning fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Fettuccine</span
+                        ></i
+                      >
+                      <span class="fw-normal me-3">$17.99</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- salad intro  -->
+            <div id="salad-intro">
+              <div
+                class="justify-content-center align-items-center row row-cols-1 row-cols-md-2"
+              >
+                <div class="px-1 px-md-4">
+                  <h1
+                    class="text-center text-uppercase fw-bold text-red text-decoration-underline"
+                  >
+                    Salads
+                  </h1>
+                  <ul class="pt-4">
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-end"
+                    >
+                      <i class="bi bi-feather text-success fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Cheeseburger</span
+                        ></i
+                      >
+                      <span class="fw-normal me-3">$29.99</span>
+                    </li>
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-start"
+                    >
+                      <i class="bi bi-feather text-success fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Hamburger</span
+                        ></i
+                      >
+                      <span class="fw-normal me-3">$25.99</span>
+                    </li>
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-end"
+                    >
+                      <i class="bi bi-feather text-success fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Chicken Burger</span
+                        ></i
+                      >
+
+                      <span class="fw-normal me-3">$18.99</span>
+                    </li>
+                    <li
+                      class="text-dark-emphasis list-unstyled py-3 justify-content-between d-flex border-bottom px-1 border-start"
+                    >
+                      <i class="bi bi-feather text-success fs-4 fw-bolder"
+                        ><span class="ms-2 text-dark-emphasis"
+                          >Mashroom Burger</span
+                        ></i
+                      >
+                      <span class="fw-normal me-3">$17.99</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-0">
+                  <img
+                    src="asset/sala_intro.jpg"
+                    alt=""
+                    class="object-fit-cover intro-card"
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- hot line  -->
+            <div
+              class="bg-red py-5 align-self-center bg-opacity-75 hover-bg-black hover-scale"
+            >
+              <h1 class="text-center text-white font-Anton fw-bold">
+                <i
+                  class="bi bi-telephone-outbound-fill fs-2 border border-2 border-light p-2 rounded-circle"
+                ></i>
+                Order Now +1(855)715763396
+              </h1>
+            </div>
+            <!-- map  -->
+            <div class="w-100 d-flex align-items-center position-relative p-0">
+              <iframe
+                class="w-100"
+                id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.773035705363!2d104.88950057481728!3d11.56812178863294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109519fe4077d69%3A0x20138e822e434660!2sRoyal%20University%20of%20Phnom%20Penh!5e0!3m2!1sen!2sus!4v1735464104219!5m2!1sen!2sus"
+                allowfullscreen=""
+                height="500px"
+                loading="lazy"
+              >
+              </iframe>
+              <div
+                class="d-grid text-center mt-2 position-absolute top-0 end-0 me-3 m-0"
+              >
+                <button
+                  class="btn btn-dark border border-light px-4 fs-5 border-2"
+                  id="mode"
+                >
+                  <span id="dark" class="d-none"
+                    ><i class="bi bi-moon-fill"></i>Dark</span
+                  >
+                  <span id="light"
+                    ><i class="bi bi-brightness-high-fill"></i>Light</span
+                  >
+                </button>
+                <span class="mt-2 bg-light rounded-2 p-2 border border-black">
+                  <a
+                    href="https://maps.app.goo.gl/D4EnW5rgLitupwxX6"
+                    target="_blank"
+                    class="text-decoration-none text-dark"
+                    >Get Direction
+                  </a></span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- About contents -->
+          <div class="tab-pane fade" id="About">
+            <!-- about header  -->
+            <div
+              class="container-fluid px-3 px-md-0 py-3 border-bottom border-bottom"
+            >
+              <div
+                class="container d-block d-md-flex text-center justify-content-between align-items-center p-0"
+              >
+                <h2
+                  class="p-0 text-red fw-bold font-Anton justify-content-between"
+                >
+                  About
+                </h2>
+                <div>
+                  <a href="#" role="tablist" class="hover-color-red text-black"
+                    ><i class="bi bi-pie-chart-fill"></i
+                  ></a>
+                  <span class="fw-bold text-dark"
+                    ><i class="bi bi-chevron-right fw-bolder px-2"></i>
+                    About
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- about text  -->
+            <div class="container p-lg-0 py-4">
+              <div
+                class="justify-content-center py-4 flex-column-reverse flex-md-row align-items-center row row-cols-1 row-cols-md-2 overflow-hidden"
+              >
+                <div class="p-1 p-md-0 pe-3" style="line-height: 1.8rem">
+                  <h2 class="text-red fw-bold text-center text-md-start">
+                    About Our Fast Food
+                  </h2>
+                  <p class="text-dark-emphasis text-center text-md-start">
+                    Proin eget tortor risus. Cras ultricies ligula sed magna
+                    dictum porta. Nulla porttitor accumsan tincidunt. Mauris
+                    blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                    Curabitur aliquet quam id dui posuere blandit. Quisque velit
+                    nisi, pretium ut lacinia in, elementum id enim. Mauris
+                    blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                    Curabitur id dui posuere blandit. Proin eget tortor risus.
+                    Cras ultricies ligula sed magna dictum porta. Nulla
+                    porttitor accumsan tincidunt. Nullare porttitor accumsan
+                    tincidunt.
+                  </p>
+                  <ul
+                    class="d-flex p-0 list-unstyled justify-content-between pe-0 pe-lg-5"
+                  >
+                    <li class="d-flex">
+                      <i class="bi bi-check-circle-fill fs-4 me-1 text-red"></i
+                      ><span>Delicious</span>
+                    </li>
+                    <li class="d-flex">
+                      <i class="bi bi-check-circle-fill fs-4 me-1 text-red"></i
+                      ><span>Yummy</span>
+                    </li>
+                    <li class="d-flex">
+                      <i class="bi bi-check-circle-fill fs-4 me-1 text-red"></i
+                      ><span> Healthy</span>
+                    </li>
+                    <li class="d-flex">
+                      <i class="bi bi-check-circle-fill fs-4 me-1 text-red"></i
+                      ><span> Tasty</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="h-100 p-1 p-md-0 rounded-2 overflow-hidden">
+                  <img
+                    src="asset/about_pic1.avif"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                    class="object-fit-cover"
+                  />
+                </div>
+              </div>
+            </div>
+            <!-- experience -->
+            <div
+              class="carousel-card-style"
+              style="
+                height: 500px !important;
+                background-image: url(asset/about_pic2.webp);
+              "
+            >
+              <div class="container-fluid p-0 bg-black bg-opacity-75 h-100">
+                <div class="container h-100 p-0 d-block">
+                  <ul
+                    class="h-100 list-unstyled px-4 row row-cols-md-2 row-cols-lg-4 text-light align-items-center justify-content-between"
+                  >
+                    <li class="text-center px-5">
+                      <h2
+                        class="py-4 bg-red rounded-5 fs-3 fw-bolder font-Anton mb-2"
+                      >
+                        15+
+                      </h2>
+                      <span class="mt-4">Years of experience</span>
+                    </li>
+                    <li class="text-center px-5">
+                      <h2
+                        class="py-4 bg-red rounded-5 fs-3 fw-bolder font-Anton mb-2"
+                      >
+                        45+
+                      </h2>
+                      <span class="mt-4">Branches in country</span>
+                    </li>
+                    <li class="text-center px-5">
+                      <h2
+                        class="py-4 bg-red rounded-5 fs-3 fw-bolder font-Anton mb-2"
+                      >
+                        65K
+                      </h2>
+                      <span class="mt-4">Years of experience</span>
+                    </li>
+                    <li class="text-center px-5">
+                      <h2
+                        class="py-4 bg-red rounded-5 fs-3 fw-bolder font-Anton mb-2"
+                      >
+                        37K
+                      </h2>
+                      <span class="mt-4">Pizza served</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Chef section -->
+            <div>
+              <div class="p-0 py-4 mt-5 font-Anton">
+                <h1 class="text-center">
+                  <i class="bi bi-align-end text-dark-emphasis"></i
+                  ><span class="text-red fw-bold px-2">Our Cheft</span
+                  ><i class="bi bi-align-start text-dark-emphasis"></i>
+                </h1>
+              </div>
+              <div class="container p-0 py-5 mb-5">
+                <div
+                  class="row row-cols-lg-4 justify-content-center list-unstyled mb-5"
+                >
+                  <li class="p-0 px-3 bg-transparent">
+                    <div
+                      class="h-75 position-relative rounded-top-2 overflow-hidden"
+                    >
+                      <img
+                        src="asset/chef2.jpg"
+                        alt=""
+                        class="object-fit-cover"
+                        width="100%"
+                        height="100%"
+                      />
+
+                      <div
+                        class="d-grid align-content-end position-absolute start-50 top-50 translate-middle"
+                      >
+                        <ul
+                          class="list-unstyled d-flex justify-content-between px-5 mx-2 pb-4"
+                        >
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-facebook"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-twitter"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-linkedin"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-envelope"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-red py-3 text-center text-white font-Anton border-bottom border-5 border-black rounded-bottom-2"
+                    >
+                      <h1 class="m-0">Speed Sloy</h1>
+                      <p>Manager Chef</p>
+                    </div>
+                  </li>
+                  <li class="p-0 px-3 bg-transparent">
+                    <div
+                      class="h-75 position-relative rounded-top-2 overflow-hidden"
+                    >
+                      <img
+                        src="asset/chef1.webp"
+                        alt=""
+                        class="object-fit-cover"
+                        width="100%"
+                        height="100%"
+                      />
+
+                      <div
+                        class="d-grid align-content-end position-absolute start-50 top-50 translate-middle"
+                      >
+                        <ul
+                          class="list-unstyled d-flex justify-content-between px-5 mx-2 pb-4"
+                        >
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-facebook"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-twitter"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-linkedin"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-envelope"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-red py-3 text-center text-white font-Anton border-bottom border-5 border-black rounded-bottom-2"
+                    >
+                      <h1 class="m-0">Albert Cook</h1>
+                      <p>Assist Chef</p>
+                    </div>
+                  </li>
+                  <li class="p-0 px-3 bg-transparent">
+                    <div
+                      class="h-75 position-relative rounded-top-2 overflow-hidden"
+                    >
+                      <img
+                        src="asset/chef3.jpg"
+                        alt=""
+                        class="object-fit-cover"
+                        width="100%"
+                        height="100%"
+                      />
+
+                      <div
+                        class="d-grid align-content-end position-absolute start-50 top-50 translate-middle"
+                      >
+                        <ul
+                          class="list-unstyled d-flex justify-content-between px-5 mx-2 pb-4"
+                        >
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-facebook"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-twitter"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-linkedin"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-envelope"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-red py-3 text-center text-white font-Anton border-bottom border-5 border-black rounded-bottom-2"
+                    >
+                      <h1 class="m-0">Jane Carter</h1>
+                      <p>Chef</p>
+                    </div>
+                  </li>
+                  <li class="p-0 px-3 bg-transparent">
+                    <div
+                      class="h-75 position-relative rounded-top-2 overflow-hidden"
+                    >
+                      <img
+                        src="asset/chef4.jpg"
+                        alt=""
+                        class="object-fit-cover"
+                        width="100%"
+                        height="100%"
+                      />
+
+                      <div
+                        class="d-grid align-content-end position-absolute start-50 top-50 translate-middle"
+                      >
+                        <ul
+                          class="list-unstyled d-flex justify-content-between px-5 mx-2 pb-4"
+                        >
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-facebook"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-twitter"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-linkedin"></i
+                            ></a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://youtu.be/4T8eqSpbekU?si=h6RNKPUeLImh3qU0"
+                              target="_blank"
+                              class="text-white fw-bold fs-5 p-2"
+                              ><i class="bi bi-envelope"></i
+                            ></a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div
+                      class="bg-red py-3 text-center text-white font-Anton border-bottom border-5 border-black rounded-bottom-2"
+                    >
+                      <h1 class="m-0">Daniel</h1>
+                      <p>Chef</p>
+                    </div>
+                  </li>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Order contents  -->
+          <div class="tab-pane fade" id="Order">
+            <!-- Order header  -->
+            <div class="py-3 px-3 px-md-0 border-bottom border-bottom">
+              <div
+                class="container d-block text-center d-md-flex justify-content-between align-items-center p-0"
+              >
+                <h2
+                  class="p-0 text-red fw-bold font-Anton justify-content-between"
+                >
+                  Shop
+                </h2>
+                <div>
+                  <a href="#" role="tablist" class="hover-color-red text-black"
+                    ><i class="bi bi-pie-chart-fill"></i
+                  ></a>
+                  <span class="fw-bold text-dark"
+                    ><i class="bi bi-chevron-right fw-bolder px-2"></i>
+                    Product
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="container p-md-0 p-3 py-3 d-block d-md-flex justify-content-between"
+            >
+              <p class="bg-red m-0 p-3 py-2 text-light rounded-2 text-center">
+                Showing all 8 results
+              </p>
+              <div class="d-flex gap-2 mt-2">
+                <select
+                  class="form-select shadow-none"
+                  aria-valuetext=""
+                  id="product"
+                >
+                  <option selected>8 Products</option>
+                  <option value="2">16 Products</option>
+                  <option value="3">32 Products</option>
+                </select>
+                <select class="form-select shadow-none" id="function_product">
+                  <option selected>Sort(A-Z)</option>
+                  <option value="2">Sort(Z-A)</option>
+                  <option value="3">Price Low to Hight</option>
+                  <option value="3">Price Hight to Low</option>
+                </select>
+              </div>
+            </div>
+            <!-- product card  -->
+            <div class="container p-0 pb-5 mb-2" id="product">
+              <div
+                class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 p-0 mt-5"
+              >
+                <div class="px-3 py-3">
+                  <div class="col p-0">
+                    <div
+                      class="card border border-danger p-0 bg-red overflow-hidden border text-light position-relative"
+                    >
+                      <img
+                        src="asset/pizza1.avif"
+                        class="bi-card-image product-image-height"
+                        alt="..."
+                      />
+                      <!-- footer card  -->
+                      <div class="card-footer p-0 border-0">
+                        <h4 class="card-title text-center py-2 fw-bold">
+                          Small Pizza
+                        </h4>
+                        <h5 class="justify-content-between text-center">
+                          <span class="px-4 text-nowrap">20% Off</span>
+                          <span class="px-4 text-nowrap">20$ only</span>
+                        </h5>
+                        <a
+                          href="#"
+                          class="btn w-100 py-2 fw-bold border-0 rounded-0 font-Anton fs-5"
+                          ><i class="bi bi-cart me-2"></i>Add to card</a
+                        >
+                      </div>
+                      <!-- hover style on card  -->
+                      <div
+                        class="position-absolute text-end w-auto h-auto m-4 pt-2 end-0"
+                      >
+                        <ul
+                          class="px-2 bg-red rounded-2 overflow-hidden text-dark list-unstyled"
+                        >
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Add to wishlist</span
+                              >
+
+                              <i
+                                class="bi bi-heart-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >compare</span
+                              >
+                              <i
+                                class="bi bi-share-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Quick</span
+                              >
+
+                              <i
+                                class="bi bi-search fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 py-3">
+                  <div class="col p-0">
+                    <div
+                      class="card border border-danger p-0 bg-red overflow-hidden border text-light position-relative"
+                    >
+                      <img
+                        src="asset/pizza2.webp"
+                        class="bi-card-image product-image-height"
+                        alt="..."
+                      />
+                      <!-- footer card  -->
+                      <div class="card-footer p-0 border-0">
+                        <h4 class="card-title text-center py-2 fw-bold">
+                          Big slice
+                        </h4>
+                        <h5 class="justify-content-between text-center">
+                          <span class="px-4 text-nowrap">10% Off</span>
+                          <span class="px-4 text-nowrap">20$ only</span>
+                        </h5>
+                        <a
+                          href="#"
+                          class="btn w-100 py-2 fw-bold border-0 rounded-0 font-Anton fs-5"
+                          ><i class="bi bi-cart me-2"></i>Add to card</a
+                        >
+                      </div>
+                      <!-- hover style on card  -->
+                      <div
+                        class="position-absolute text-end w-auto h-auto m-4 pt-2 end-0"
+                      >
+                        <ul
+                          class="px-2 bg-red rounded-2 overflow-hidden text-dark list-unstyled"
+                        >
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Add to wishlist</span
+                              >
+
+                              <i
+                                class="bi bi-heart-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >compare</span
+                              >
+                              <i
+                                class="bi bi-share-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Quick</span
+                              >
+
+                              <i
+                                class="bi bi-search fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 py-3">
+                  <div class="col p-0">
+                    <div
+                      class="card border border-danger p-0 bg-red overflow-hidden border text-light position-relative"
+                    >
+                      <img
+                        src="asset/pizza3.jpg"
+                        class="bi-card-image product-image-height"
+                        alt="..."
+                      />
+                      <!-- footer card  -->
+                      <div class="card-footer p-0 border-0">
+                        <h4 class="card-title text-center py-2 fw-bold">
+                          See food pizza
+                        </h4>
+                        <h5 class="justify-content-between text-center">
+                          <span class="px-4 text-nowrap">20% Off</span>
+                          <span class="px-4 text-nowrap">10$ only</span>
+                        </h5>
+                        <a
+                          href="#"
+                          class="btn w-100 py-2 fw-bold border-0 rounded-0 font-Anton fs-5"
+                          ><i class="bi bi-cart me-2"></i>Add to card</a
+                        >
+                      </div>
+                      <!-- hover style on card  -->
+                      <div
+                        class="position-absolute text-end w-auto h-auto m-4 pt-2 end-0"
+                      >
+                        <ul
+                          class="px-2 bg-red rounded-2 overflow-hidden text-dark list-unstyled"
+                        >
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Add to wishlist</span
+                              >
+
+                              <i
+                                class="bi bi-heart-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >compare</span
+                              >
+                              <i
+                                class="bi bi-share-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Quick</span
+                              >
+
+                              <i
+                                class="bi bi-search fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 py-3">
+                  <div class="col p-0">
+                    <div
+                      class="card border border-danger p-0 bg-red overflow-hidden border text-light position-relative"
+                    >
+                      <img
+                        src="asset/burger1.jpg"
+                        class="bi-card-image product-image-height"
+                        alt="..."
+                      />
+                      <!-- footer card  -->
+                      <div class="card-footer p-0 border-0">
+                        <h4 class="card-title text-center py-2 fw-bold">
+                          Magic burger
+                        </h4>
+                        <h5 class="justify-content-between text-center">
+                          <span class="px-4 text-nowrap">20% Off</span>
+                          <span class="px-4 text-nowrap">20$ only</span>
+                        </h5>
+                        <a
+                          href="#"
+                          class="btn w-100 py-2 fw-bold border-0 rounded-0 font-Anton fs-5"
+                          ><i class="bi bi-cart me-2"></i>Add to card</a
+                        >
+                      </div>
+                      <!-- hover style on card  -->
+                      <div
+                        class="position-absolute text-end w-auto h-auto m-4 pt-2 end-0"
+                      >
+                        <ul
+                          class="px-2 bg-red rounded-2 overflow-hidden text-dark list-unstyled"
+                        >
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Add to wishlist</span
+                              >
+
+                              <i
+                                class="bi bi-heart-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >compare</span
+                              >
+                              <i
+                                class="bi bi-share-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Quick</span
+                              >
+
+                              <i
+                                class="bi bi-search fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 py-3">
+                  <div class="col p-0">
+                    <div
+                      class="card border border-danger p-0 bg-red overflow-hidden border text-light position-relative"
+                    >
+                      <img
+                        src="asset/burger2.webp"
+                        class="bi-card-image product-image-height"
+                        alt="..."
+                      />
+                      <!-- footer card  -->
+                      <div class="card-footer p-0 border-0">
+                        <h4 class="card-title text-center py-2 fw-bold">
+                          Burger Ke bork
+                        </h4>
+                        <h5 class="justify-content-between text-center">
+                          <span class="px-4 text-nowrap">20% Off</span>
+                          <span class="px-4 text-nowrap">20$ only</span>
+                        </h5>
+                        <a
+                          href="#"
+                          class="btn w-100 py-2 fw-bold border-0 rounded-0 font-Anton fs-5"
+                          ><i class="bi bi-cart me-2"></i>Add to card</a
+                        >
+                      </div>
+                      <!-- hover style on card  -->
+                      <div
+                        class="position-absolute text-end w-auto h-auto m-4 pt-2 end-0"
+                      >
+                        <ul
+                          class="px-2 bg-red rounded-2 overflow-hidden text-dark list-unstyled"
+                        >
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Add to wishlist</span
+                              >
+
+                              <i
+                                class="bi bi-heart-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >compare</span
+                              >
+                              <i
+                                class="bi bi-share-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Quick</span
+                              >
+
+                              <i
+                                class="bi bi-search fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 py-3">
+                  <div class="col p-0">
+                    <div
+                      class="card border border-danger p-0 bg-red overflow-hidden border text-light position-relative"
+                    >
+                      <img
+                        src="asset/burger3.jpg"
+                        class="bi-card-image product-image-height"
+                        alt="..."
+                      />
+                      <!-- footer card  -->
+                      <div class="card-footer p-0 border-0">
+                        <h4 class="card-title text-center py-2 fw-bold">
+                          Burger Smos sne
+                        </h4>
+                        <h5 class="justify-content-between text-center">
+                          <span class="px-4 text-nowrap">20% Off</span>
+                          <span class="px-4 text-nowrap">20$ only</span>
+                        </h5>
+                        <a
+                          href="#"
+                          class="btn w-100 py-2 fw-bold border-0 rounded-0 font-Anton fs-5"
+                          ><i class="bi bi-cart me-2"></i>Add to card</a
+                        >
+                      </div>
+                      <!-- hover style on card  -->
+                      <div
+                        class="position-absolute text-end w-auto h-auto m-4 pt-2 end-0"
+                      >
+                        <ul
+                          class="px-2 bg-red rounded-2 overflow-hidden text-dark list-unstyled"
+                        >
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Add to wishlist</span
+                              >
+
+                              <i
+                                class="bi bi-heart-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >compare</span
+                              >
+                              <i
+                                class="bi bi-share-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Quick</span
+                              >
+
+                              <i
+                                class="bi bi-search fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 py-3">
+                  <div class="col p-0">
+                    <div
+                      class="card border border-danger p-0 bg-red overflow-hidden border text-light position-relative"
+                    >
+                      <img
+                        src="asset/pasta1.jpg"
+                        class="bi-card-image product-image-height"
+                        alt="..."
+                      />
+                      <!-- footer card  -->
+                      <div class="card-footer p-0 border-0">
+                        <h4 class="card-title text-center py-2 fw-bold">
+                          Normal pasta
+                        </h4>
+                        <h5 class="justify-content-between text-center">
+                          <span class="px-4 text-nowrap">20% Off</span>
+                          <span class="px-4 text-nowrap">20$ only</span>
+                        </h5>
+                        <a
+                          href="#"
+                          class="btn w-100 py-2 fw-bold border-0 rounded-0 font-Anton fs-5"
+                          ><i class="bi bi-cart me-2"></i>Add to card</a
+                        >
+                      </div>
+                      <!-- hover style on card  -->
+                      <div
+                        class="position-absolute text-end w-auto h-auto m-4 pt-2 end-0"
+                      >
+                        <ul
+                          class="px-2 bg-red rounded-2 overflow-hidden text-dark list-unstyled"
+                        >
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Add to wishlist</span
+                              >
+
+                              <i
+                                class="bi bi-heart-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >compare</span
+                              >
+                              <i
+                                class="bi bi-share-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Quick</span
+                              >
+
+                              <i
+                                class="bi bi-search fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 py-3">
+                  <div class="col p-0">
+                    <div
+                      class="card border border-danger p-0 bg-red overflow-hidden border text-light position-relative"
+                    >
+                      <img
+                        src="asset/pasta2.jpg"
+                        class="bi-card-image product-image-height"
+                        alt="..."
+                      />
+                      <!-- footer card  -->
+                      <div class="card-footer p-0 border-0">
+                        <h4 class="card-title text-center py-2 fw-bold">
+                          Poke pasta
+                        </h4>
+                        <h5 class="justify-content-between text-center">
+                          <span class="px-4 text-nowrap">20% Off</span>
+                          <span class="px-4 text-nowrap">20$ only</span>
+                        </h5>
+                        <a
+                          href="#"
+                          class="btn w-100 py-2 fw-bold border-0 rounded-0 font-Anton fs-5"
+                          ><i class="bi bi-cart me-2"></i>Add to card</a
+                        >
+                      </div>
+                      <!-- hover style on card  -->
+                      <div
+                        class="position-absolute text-end w-auto h-auto m-4 pt-2 end-0"
+                      >
+                        <ul
+                          class="px-2 bg-red rounded-2 overflow-hidden text-dark list-unstyled"
+                        >
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Add to wishlist</span
+                              >
+
+                              <i
+                                class="bi bi-heart-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >compare</span
+                              >
+                              <i
+                                class="bi bi-share-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Quick</span
+                              >
+
+                              <i
+                                class="bi bi-search fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 py-3">
+                  <div class="col p-0">
+                    <div
+                      class="card border border-danger p-0 bg-red overflow-hidden border text-light position-relative"
+                    >
+                      <img
+                        src="asset/pasta3.jpg"
+                        class="bi-card-image product-image-height"
+                        alt="..."
+                      />
+                      <!-- footer card  -->
+                      <div class="card-footer p-0 border-0">
+                        <h4 class="card-title text-center py-2 fw-bold">
+                          See food pasta
+                        </h4>
+                        <h5 class="justify-content-between text-center">
+                          <span class="px-4 text-nowrap">20% Off</span>
+                          <span class="px-4 text-nowrap">20$ only</span>
+                        </h5>
+                        <a
+                          href="#"
+                          class="btn w-100 py-2 fw-bold border-0 rounded-0 font-Anton fs-5"
+                          ><i class="bi bi-cart me-2"></i>Add to card</a
+                        >
+                      </div>
+                      <!-- hover style on card  -->
+                      <div
+                        class="position-absolute text-end w-auto h-auto m-4 pt-2 end-0"
+                      >
+                        <ul
+                          class="px-2 bg-red rounded-2 overflow-hidden text-dark list-unstyled"
+                        >
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Add to wishlist</span
+                              >
+
+                              <i
+                                class="bi bi-heart-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >compare</span
+                              >
+                              <i
+                                class="bi bi-share-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Quick</span
+                              >
+
+                              <i
+                                class="bi bi-search fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 py-3">
+                  <div class="col p-0">
+                    <div
+                      class="card border border-danger p-0 bg-red overflow-hidden border text-light position-relative"
+                    >
+                      <img
+                        src="asset/salad1.jpg"
+                        class="bi-card-image product-image-height"
+                        alt="..."
+                      />
+                      <!-- footer card  -->
+                      <div class="card-footer p-0 border-0">
+                        <h4 class="card-title text-center py-2 fw-bold">
+                          Chese salad
+                        </h4>
+                        <h5 class="justify-content-between text-center">
+                          <span class="px-4 text-nowrap">20% Off</span>
+                          <span class="px-4 text-nowrap">20$ only</span>
+                        </h5>
+                        <a
+                          href="#"
+                          class="btn w-100 py-2 fw-bold border-0 rounded-0 font-Anton fs-5"
+                          ><i class="bi bi-cart me-2"></i>Add to card</a
+                        >
+                      </div>
+                      <!-- hover style on card  -->
+                      <div
+                        class="position-absolute text-end w-auto h-auto m-4 pt-2 end-0"
+                      >
+                        <ul
+                          class="px-2 bg-red rounded-2 overflow-hidden text-dark list-unstyled"
+                        >
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Add to wishlist</span
+                              >
+
+                              <i
+                                class="bi bi-heart-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >compare</span
+                              >
+                              <i
+                                class="bi bi-share-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Quick</span
+                              >
+
+                              <i
+                                class="bi bi-search fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 py-3">
+                  <div class="col p-0">
+                    <div
+                      class="card border border-danger p-0 bg-red overflow-hidden border text-light position-relative"
+                    >
+                      <img
+                        src="asset/salad2.jpg"
+                        class="bi-card-image product-image-height"
+                        alt="..."
+                      />
+                      <!-- footer card  -->
+                      <div class="card-footer p-0 border-0">
+                        <h4 class="card-title text-center py-2 fw-bold">
+                          vegetable salad
+                        </h4>
+                        <h5 class="justify-content-between text-center">
+                          <span class="px-4 text-nowrap">20% Off</span>
+                          <span class="px-4 text-nowrap">20$ only</span>
+                        </h5>
+                        <a
+                          href="#"
+                          class="btn w-100 py-2 fw-bold border-0 rounded-0 font-Anton fs-5"
+                          ><i class="bi bi-cart me-2"></i>Add to card</a
+                        >
+                      </div>
+                      <!-- hover style on card  -->
+                      <div
+                        class="position-absolute text-end w-auto h-auto m-4 pt-2 end-0"
+                      >
+                        <ul
+                          class="px-2 bg-red rounded-2 overflow-hidden text-dark list-unstyled"
+                        >
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Add to wishlist</span
+                              >
+
+                              <i
+                                class="bi bi-heart-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >compare</span
+                              >
+                              <i
+                                class="bi bi-share-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Quick</span
+                              >
+
+                              <i
+                                class="bi bi-search fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="px-3 py-3">
+                  <div class="col p-0">
+                    <div
+                      class="card border border-danger p-0 bg-red overflow-hidden border text-light position-relative"
+                    >
+                      <img
+                        src="asset/salad3.jpg"
+                        class="bi-card-image product-image-height"
+                        alt="..."
+                      />
+                      <!-- footer card  -->
+                      <div class="card-footer p-0 border-0">
+                        <h4 class="card-title text-center py-2 fw-bold">
+                          Fresh salad
+                        </h4>
+                        <h5 class="justify-content-between text-center">
+                          <span class="px-4 text-nowrap">20% Off</span>
+                          <span class="px-4 text-nowrap">20$ only</span>
+                        </h5>
+                        <a
+                          href="#"
+                          class="btn w-100 py-2 fw-bold border-0 rounded-0 font-Anton fs-5"
+                          ><i class="bi bi-cart me-2"></i>Add to card</a
+                        >
+                      </div>
+                      <!-- hover style on card  -->
+                      <div
+                        class="position-absolute text-end w-auto h-auto m-4 pt-2 end-0"
+                      >
+                        <ul
+                          class="px-2 bg-red rounded-2 overflow-hidden text-dark list-unstyled"
+                        >
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Add to wishlist</span
+                              >
+
+                              <i
+                                class="bi bi-heart-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >compare</span
+                              >
+                              <i
+                                class="bi bi-share-fill fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li class="my-3">
+                            <a href="#">
+                              <span
+                                class="mx-4 bg-red text-white py-1 px-2 rounded-1 position-absolute end-50 text-nowrap px-3"
+                                >Quick</span
+                              >
+
+                              <i
+                                class="bi bi-search fw-bolder text-light text-decoration-none text-center"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contact contents -->
+          <div class="tab-pane fade" id="Contact">
+            <div class="py-3 border-bottom border-bottom">
+              <div
+                class="container d-block d-md-flex text-center justify-content-between align-items-center p-0"
+              >
+                <h2
+                  class="p-0 text-red fw-bold font-Anton justify-content-between"
+                >
+                  Contact
+                </h2>
+                <div>
+                  <a href="#" role="tablist" class="hover-color-red text-black"
+                    ><i class="bi bi-pie-chart-fill"></i
+                  ></a>
+                  <span class="fw-bold text-dark"
+                    ><i class="bi bi-chevron-right fw-bolder px-2"></i>
+                    contact
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- call and location  -->
+            <div class="container py-4 p-0">
+              <ul
+                class="p-md-0 p-3 list-unstyled d-block d-md-flex justify-content-between flex-wrap"
+              >
+                <li class="mt-2">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center text-decoration-none"
+                  >
+                    <i
+                      class="fs-2 bi bi-telephone-plus fw-bold px-3 py-2 me-3 rounded-2"
+                    ></i>
+                    <span>
+                      <h2 class="m-0 text-red fw-bold">Phone</h2>
+                      <p class="m-0">(+855) 715763396</p>
+                    </span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center text-decoration-none"
+                    ><i
+                      class="fs-2 bi bi-envelope fw-bold px-3 py-2 me-3 rounded-2"
+                    ></i>
+                    <span>
+                      <h2 class="m-0 text-red fw-bold">Email</h2>
+                      <p class="m-0">chhunsokchea317@gmail.com</p>
+                    </span>
+                  </a>
+                </li>
+                <li class="mt-2">
+                  <a
+                    href="#"
+                    class="d-flex align-items-center text-decoration-none"
+                    ><i
+                      class="fs-2 bi bi-geo-alt-fill fw-bold px-3 py-2 me-3 rounded-2"
+                    ></i>
+                    <span>
+                      <h2 class="m-0 text-red fw-bold">Address</h2>
+                      <p class="m-0">371 Solar Street, Teuk Thla</p>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- contact form  -->
+            <div class="container">
+              <div class="p-md-0 p-3 row row-cols-2 my-5">
+                <div class="container px-1 px-md-5 bg-light-subtle border">
+                  <h1 class="text-red">Contact Form</h1>
+                  <span
+                    ><i class="bi bi-align-end fs-4 text-light-emphasis"></i
+                  ></span>
+                  <form action="contact" class="w-100">
+                    <div class="d-block d-md-flex justify-content-between">
+                      <label for="name" aria-controls="hidden"></label>
+                      <input
+                        type="text"
+                        name="username"
+                        id="username "
+                        placeholder="Your Name*"
+                        required
+                        class="form-control-plaintext rounded-2 bg-black text-light p-2 me-2"
+                      />
+                      <label for="name" aria-controls="hidden"></label>
+                      <input
+                        type="email"
+                        name="useremail"
+                        id="useremail "
+                        placeholder="Your Email*"
+                        required
+                        class="form-control-plaintext rounded-2 bg-black text-light p-2 ms-md-2 ms-0"
+                      />
+                    </div>
+                    <label for="text" aria-controls="hidden"></label>
+                    <textarea
+                      name="text"
+                      id="text"
+                      placeholder="Your comments"
+                      class="w-100 form-control-plaintext bg-black p-2 rounded-2 text-light"
+                      style="height: 200px !important"
+                    ></textarea>
+                    <p class="m-0 text-center text-md-start">
+                      <button
+                        class="btn btn-outline-dark px-3 py-2 mt-2 mt-md-5"
+                      >
+                        Send Message
+                      </button>
+                    </p>
+                  </form>
+                </div>
+                <div class="col container">
+                  <iframe
+                    style="filter: invert(100%)"
+                    class="w-100 rounded-2"
+                    id="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.773035705363!2d104.88950057481728!3d11.56812178863294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109519fe4077d69%3A0x20138e822e434660!2sRoyal%20University%20of%20Phnom%20Penh!5e0!3m2!1sen!2sus!4v1735464104219!5m2!1sen!2sus"
+                    allowfullscreen=""
+                    height="500px"
+                    loading="lazy"
+                  >
+                  </iframe>
+                </div>
+              </div>
+            </div>
+            <!-- hot line  -->
+            <div
+              class="py-4 align-self-center bg-black text-white hover-scale hover-bg hover-bg-danger"
+            >
+              <h1 class="text-center font-Anton fw-bold">
+                <i
+                  class="bi bi-telephone-outbound-fill fs-2 border border-2 border-light p-2 rounded-circle"
+                ></i>
+                Order Now +1(855)715763396
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="container-fluid p-0">
+      <div
+        class="bg-red p-0 m-0 align-content-center"
+        style="height: 50vh"
+        id="nav-footer"
+      >
+        <!-- Logo  -->
+        <p class="text-center text-light">
+          <img src="asset/logo_footer.png" width="180px" alt="" />
+        </p>
+        <ul
+          class="list-unstyled d-flex gap-3 justify-content-center align-items-center"
+        >
+          <li>
+            <a href="#"><i class="bi bi-facebook rounded-circle"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-play-btn-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-telegram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+          </li>
+        </ul>
+        <span
+          ><a
+            href="#"
+            class="text-decoration-none d-flex text-center align-items-center justify-content-center"
+            ><i class="bi bi-geo-alt-fill me-2 text-light"></i>Street Russia.
+            Phnom Penh</a
+          ></span
+        >
+      </div>
+      <!-- copy right footer  -->
+      <div class="py-4 bg-black text-center">
+        <p class="text-light-emphasis fw-medium m-0">
+          Copyright © 2024 Chea Smos Sne. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="./style/style.js"></script>
+</html>

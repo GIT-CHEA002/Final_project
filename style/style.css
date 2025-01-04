@@ -1,0 +1,298 @@
+/* Set the style for body main and footer  */
+*::selection {
+  color: white !important;
+  background-color: red !important;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1; /* Allow the main content to grow and fill the remaining space */
+}
+
+footer {
+  background-color: black; /* or your preferred color */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+/* font family  */
+.font-Anton {
+  font-family: "Anton" !important;
+}
+/*-----------------------Define some class and hover effect to use instead B5------------------------*/
+.text-red {
+  color: red !important;
+}
+.bg-red {
+  background-color: red !important;
+}
+.hover-color-red:hover {
+  color: red !important;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.hover-scale:hover {
+  letter-spacing: 6px !important;
+  transition: 0.3s ease-in-out !important;
+  cursor: pointer;
+}
+.hover-bg-black:hover {
+  background-color: #000 !important;
+  transition: 0.3s ease-in-out !important;
+}
+.hover-bg-danger:hover {
+  background-color: rgba(255, 0, 0, 0.403) !important;
+  transition: 0.3s ease-in-out !important;
+}
+.hover-bg-red:hover {
+  background-color: red !important;
+  transition: 0.3s ease-in-out !important;
+  cursor: pointer !important;
+}
+.carousel-card-style {
+  height: 100vh !important;
+  width: 100% !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  object-fit: cover !important;
+}
+/*-----------------Navbar behavior and style------------------------------*/
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add smooth animation */
+}
+.hidden {
+  transform: translateY(-100%); /* Move navbar out of view */
+  opacity: 0; /* Fade out the navbar */
+}
+
+.product-image-height {
+  height: 260px !important;
+}
+
+/*--------------------------Home content------------------------*/
+/* intro-list  */
+#intro_list li div a div > h4,
+#intro_list li div a div > h2 {
+  opacity: 1; /* Start with both h4 and h2 hidden */
+  transition: opacity 0.4s ease-in-out; /* Smooth fade-in and fade-out */
+  text-align: center;
+  margin: 0;
+}
+#intro_list li div a div > h4 {
+  outline: 1px solid white;
+  outline-offset: 2px;
+  opacity: 0;
+}
+/* When hovering over the parent div */
+#intro_list li div a div:hover > h4 {
+  opacity: 1; /* Fade out h4 */
+}
+#intro_list li div a div:hover > h2 {
+  opacity: 0; /* Fade in h2 */
+}
+/* Optional: Add a background color on hover for the div */
+#intro_list li div a div:hover {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.intro-card {
+  height: 500px !important;
+  width: 100%;
+}
+/* carousel  */
+
+#Carousel_hero_slide .carousel-item > div {
+  width: 0;
+  transition: 1s ease-in-out !important;
+  color: white;
+  overflow: hidden !important;
+  font-size: clamp(1.6rem, 5vw, 4rem) !important;
+}
+
+#Carousel_hero_slide .carousel-item.active div {
+  width: 100%;
+}
+
+/* -------------------------------About content--------------------------- */
+
+#About div:last-of-type div:last-of-type div li div:first-of-type > div {
+  background-color: rgba(234, 48, 48, 0.4);
+  opacity: 0;
+  width: 100%;
+  height: 105%;
+  transition: opacity 0.3s ease-in-out;
+}
+#About div:last-of-type div:last-of-type div li:hover div:first-of-type > div {
+  opacity: 1;
+}
+#About
+  div:last-of-type
+  div:last-of-type
+  div
+  li
+  div:first-of-type
+  > div
+  > ul
+  > li:hover {
+  animation: rotation 0.6s ease forwards;
+}
+/* ---------------------------------Product Contents------------------------------ */
+#product div div div div div:last-child {
+  display: none;
+}
+#product div div div div div:last-child ul li span {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+#product div div div div div:last-child ul li:hover span {
+  opacity: 1;
+}
+#product div div div:hover div div:last-child {
+  display: block;
+}
+#product div div div div div > a {
+  background-color: #000;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+#product div div div div div > a:hover {
+  background-color: white;
+  border: 3px solid red;
+  color: #000;
+}
+/* -----------------------------Contact contents-------------------------------- */
+#Contact div:nth-child(2) ul li a span p {
+  color: #000;
+  transition: 0.3s ease-in-out;
+}
+#Contact div:nth-child(2) ul li a i {
+  color: white;
+  background-color: red;
+  transition: 0.3s ease-in-out;
+}
+#Contact div:nth-child(2) ul li:hover a i {
+  color: white;
+  background-color: #000;
+}
+#Contact div:nth-child(2) ul li:hover a span p {
+  color: red;
+}
+
+/* ------------------------------------Nav footer behavior-------------------------------------- */
+#nav-footer span a i,
+#nav-footer li a {
+  border-radius: 50% !important;
+  width: 50px !important;
+  height: 50px !important;
+  color: white;
+  background: transparent;
+  background-color: rgba(128, 128, 128, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#nav-footer span a {
+  color: #ffffff;
+  background: transparent;
+}
+#nav-footer ul li:hover a i {
+  transform: rotateX(360deg);
+  background: #000;
+  animation: rotation 0.6s ease forwards;
+}
+#nav-footer span a i:hover {
+  background: #000;
+}
+#nav-footer span a:hover {
+  color: #000;
+}
+
+#nav-footer li:hover a {
+  background-color: #000;
+}
+/* -----------------Animation by keyfram---------------------------------- */
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+/* Keyframes for reverse rotation */
+@keyframes reverse-rotation {
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+/* --------------------------------Some Responesive-------------------------------------  */
+@media screen and (min-width: 992px) {
+  /* nav-item for min 992px */
+  #nav_tabpage > ul li > a {
+    color: #f4efef;
+  }
+
+  #nav_tabpage > ul li > a.active {
+    color: #000 !important;
+    border-radius: 8px !important;
+  }
+  #nav_tabpage > ul li:hover > a {
+    color: #000;
+    cursor: pointer;
+    background-color: white !important;
+    border-radius: 8px !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* nav-item for max 992px */
+  #nav_tabpage > ul li {
+    width: 100% !important;
+    color: #000;
+    cursor: pointer;
+    border-radius: 0 !important;
+  }
+  #nav_tabpage > ul li:hover {
+    background-color: white !important;
+  }
+  #nav_tabpage > ul li > a {
+    color: #000;
+  }
+  #nav_tabpage > ul li > a.active {
+    color: black;
+    border-radius: 0 !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 776px) {
+  .offcanvas {
+    width: 50% !important;
+  }
+  .nav-list {
+    width: 100% !important;
+    border-radius: 0% !important;
+  }
+  .dropdown {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .offcanvas {
+    width: 75% !important;
+  }
+  .nav-list {
+    width: 100% !important;
+    border-radius: 0% !important;
+  }
+}
